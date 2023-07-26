@@ -1,0 +1,4 @@
+<resources>
+    <style name="Theme.MealSearch" parent="Theme.MaterialComponents.Light">
+    </style>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "464595555631",
+    "project_id": "meal-search-5b8e4",
+    "storage_bucket": "meal-search-5b8e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464595555631:android:497d181d3376c55a47bdda",
+        "android_client_info": {
+          "package_name": "com.zobaze.mealsearch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464595555631-kfg0a0p4qma8c59obodohl3sorj7iosr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4n2zkz-1GHXjHHLuDkiwOek5xX8ds7hk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464595555631-kfg0a0p4qma8c59obodohl3sorj7iosr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
