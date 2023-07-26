@@ -24,7 +24,8 @@ https://www.themealdb.com/api/json/v1/1/lookup.php
 · The project is even easier to maintain.
 
 
-![mvvm_clean](https://github.com/prakashzobaze/clean_arch/assets/140489453/84e884eb-2cdd-4a8c-bb97-1a536d259ab5)
+ ![mvvm_clean](https://github.com/prakashzobaze/clean/assets/140489453/9d6dfa33-cafb-40f7-90a5-da6b93765cf0)
+
 
 The code is divided into three separate layers:
 
@@ -70,7 +71,7 @@ This has all the repositories which the domain layer can use.
 
 
 
+![architecture](https://github.com/prakashzobaze/clean/assets/140489453/a8bb62bf-4c26-4871-b849-3217e320b912)
 
 
-![architecture](https://github.com/prakashzobaze/clean_arch/assets/140489453/3d0cd8bb-fc57-417d-b815-9419b66db651)
 
