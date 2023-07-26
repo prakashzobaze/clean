@@ -30,20 +30,20 @@ public abstract class FragmentMealSearchBinding extends ViewDataBinding {
   public final ProgressBar progressMealSearch;
 
   @NonNull
-  public final TextView tvDisplayQuotes;
+  public final TextView tvDisplayProducts;
 
   @NonNull
   public final TextView tvUsers;
 
   protected FragmentMealSearchBinding(Object _bindingComponent, View _root, int _localFieldCount,
       RecyclerView mealSearchRecycler, SearchView mealSearchView, TextView nothingFound,
-      ProgressBar progressMealSearch, TextView tvDisplayQuotes, TextView tvUsers) {
+      ProgressBar progressMealSearch, TextView tvDisplayProducts, TextView tvUsers) {
     super(_bindingComponent, _root, _localFieldCount);
     this.mealSearchRecycler = mealSearchRecycler;
     this.mealSearchView = mealSearchView;
     this.nothingFound = nothingFound;
     this.progressMealSearch = progressMealSearch;
-    this.tvDisplayQuotes = tvDisplayQuotes;
+    this.tvDisplayProducts = tvDisplayProducts;
     this.tvUsers = tvUsers;
   }
 

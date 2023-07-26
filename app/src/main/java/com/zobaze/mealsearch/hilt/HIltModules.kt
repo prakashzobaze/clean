@@ -1,12 +1,10 @@
 package com.zobaze.mealsearch.hilt
 
-import android.content.Context
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 import com.zobaze.mealsearch.common.Constants
 import com.zobaze.mealsearch.data.remote.MealSearchAPI
-import com.zobaze.mealsearch.data.remote.QuoteDisplayAPI
+import com.zobaze.mealsearch.data.remote.ProductDisplayAPI
 import com.zobaze.mealsearch.data.repository.FirebaseDataSourceImpl
 import com.zobaze.mealsearch.data.repository.MealDetailsRepositoryImpl
 import com.zobaze.mealsearch.data.repository.MealSearchRepistoryImpl
@@ -14,11 +12,10 @@ import com.zobaze.mealsearch.data.repository.QuoteDisplayRepositoryImpl
 import com.zobaze.mealsearch.domain.repository.FirebaseDataSourceRepository
 import com.zobaze.mealsearch.domain.repository.MealDetailsRepository
 import com.zobaze.mealsearch.domain.repository.MealSearchRepository
-import com.zobaze.mealsearch.domain.repository.QuoteDisplayRepository
+import com.zobaze.mealsearch.domain.repository.ProductDisplayRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -51,14 +48,14 @@ object HIltModules {
 
     @Provides
     @Singleton
-    fun provideQuoteDisplayAPI(): QuoteDisplayAPI {
-        return Retrofit.Builder().baseUrl(Constants.BASE_URL_QUOTES)
+    fun provideProductsDisplayAPI(): ProductDisplayAPI {
+        return Retrofit.Builder().baseUrl(Constants.BASE_URL_PRODUCTS)
             .addConverterFactory(GsonConverterFactory.create()).build()
-            .create(QuoteDisplayAPI::class.java)
+            .create(ProductDisplayAPI::class.java)
     }
 
     @Provides
-    fun provideQuotesList(quoteDisplayAPI: QuoteDisplayAPI): QuoteDisplayRepository {
+    fun provideProductsList(quoteDisplayAPI: ProductDisplayAPI): ProductDisplayRepository {
         return QuoteDisplayRepositoryImpl(quoteDisplayAPI)
     }
 

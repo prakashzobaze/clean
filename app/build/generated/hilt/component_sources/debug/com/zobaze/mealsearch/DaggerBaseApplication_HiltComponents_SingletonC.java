@@ -9,22 +9,22 @@ import androidx.lifecycle.ViewModel;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.zobaze.mealsearch.data.remote.MealSearchAPI;
-import com.zobaze.mealsearch.data.remote.QuoteDisplayAPI;
+import com.zobaze.mealsearch.data.remote.ProductDisplayAPI;
 import com.zobaze.mealsearch.domain.repository.FirebaseDataSourceRepository;
 import com.zobaze.mealsearch.domain.repository.MealDetailsRepository;
 import com.zobaze.mealsearch.domain.repository.MealSearchRepository;
-import com.zobaze.mealsearch.domain.repository.QuoteDisplayRepository;
+import com.zobaze.mealsearch.domain.repository.ProductDisplayRepository;
 import com.zobaze.mealsearch.domain.use_case.FirebaseUserUserCase;
 import com.zobaze.mealsearch.domain.use_case.GetMealDetailsUseCase;
-import com.zobaze.mealsearch.domain.use_case.QuotesDisplayUseCase;
+import com.zobaze.mealsearch.domain.use_case.ProductsDisplayUseCase;
 import com.zobaze.mealsearch.domain.use_case.SearchMealsUseCase;
 import com.zobaze.mealsearch.hilt.HIltModules;
 import com.zobaze.mealsearch.hilt.HIltModules_ProvideFirebaseUsersFactory;
 import com.zobaze.mealsearch.hilt.HIltModules_ProvideMealDetailsFactory;
 import com.zobaze.mealsearch.hilt.HIltModules_ProvideMealSearchAPIFactory;
 import com.zobaze.mealsearch.hilt.HIltModules_ProvideMealSearchRepositoryFactory;
-import com.zobaze.mealsearch.hilt.HIltModules_ProvideQuoteDisplayAPIFactory;
-import com.zobaze.mealsearch.hilt.HIltModules_ProvideQuotesListFactory;
+import com.zobaze.mealsearch.hilt.HIltModules_ProvideProductsDisplayAPIFactory;
+import com.zobaze.mealsearch.hilt.HIltModules_ProvideProductsListFactory;
 import com.zobaze.mealsearch.hilt.HIltModules_ProvideUsersRefFactory;
 import com.zobaze.mealsearch.presentation.firebase_users.UserViewModel;
 import com.zobaze.mealsearch.presentation.firebase_users.UserViewModel_HiltModules_KeyModule_ProvideFactory;
@@ -35,9 +35,9 @@ import com.zobaze.mealsearch.presentation.meal_details.MealDetailsViewModel_Hilt
 import com.zobaze.mealsearch.presentation.meal_search.MealSearchFragment;
 import com.zobaze.mealsearch.presentation.meal_search.MealSearchViewModel;
 import com.zobaze.mealsearch.presentation.meal_search.MealSearchViewModel_HiltModules_KeyModule_ProvideFactory;
-import com.zobaze.mealsearch.presentation.quotes.QuoteViewModel;
-import com.zobaze.mealsearch.presentation.quotes.QuoteViewModel_HiltModules_KeyModule_ProvideFactory;
-import com.zobaze.mealsearch.presentation.quotes.QuotesFragment;
+import com.zobaze.mealsearch.presentation.products.ProductViewModel;
+import com.zobaze.mealsearch.presentation.products.ProductViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.zobaze.mealsearch.presentation.products.ProductsFragment;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.flags.HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
@@ -360,7 +360,7 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
     }
 
     @Override
-    public void injectQuotesFragment(QuotesFragment arg0) {
+    public void injectProductsFragment(ProductsFragment arg0) {
     }
 
     @Override
@@ -419,7 +419,7 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return ImmutableSet.<String>of(MealDetailsViewModel_HiltModules_KeyModule_ProvideFactory.provide(), MealSearchViewModel_HiltModules_KeyModule_ProvideFactory.provide(), QuoteViewModel_HiltModules_KeyModule_ProvideFactory.provide(), UserViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+      return ImmutableSet.<String>of(MealDetailsViewModel_HiltModules_KeyModule_ProvideFactory.provide(), MealSearchViewModel_HiltModules_KeyModule_ProvideFactory.provide(), ProductViewModel_HiltModules_KeyModule_ProvideFactory.provide(), UserViewModel_HiltModules_KeyModule_ProvideFactory.provide());
     }
 
     @Override
@@ -449,7 +449,7 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
 
     private Provider<MealSearchViewModel> mealSearchViewModelProvider;
 
-    private Provider<QuoteViewModel> quoteViewModelProvider;
+    private Provider<ProductViewModel> productViewModelProvider;
 
     private Provider<UserViewModel> userViewModelProvider;
 
@@ -471,8 +471,8 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
       return new SearchMealsUseCase(singletonCImpl.mealSearchRepository());
     }
 
-    private QuotesDisplayUseCase quotesDisplayUseCase() {
-      return new QuotesDisplayUseCase(singletonCImpl.quoteDisplayRepository());
+    private ProductsDisplayUseCase productsDisplayUseCase() {
+      return new ProductsDisplayUseCase(singletonCImpl.productDisplayRepository());
     }
 
     private FirebaseUserUserCase firebaseUserUserCase() {
@@ -484,13 +484,13 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
         final ViewModelLifecycle viewModelLifecycleParam) {
       this.mealDetailsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
       this.mealSearchViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
-      this.quoteViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.productViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
       this.userViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return ImmutableMap.<String, Provider<ViewModel>>of("com.zobaze.mealsearch.presentation.meal_details.MealDetailsViewModel", ((Provider) mealDetailsViewModelProvider), "com.zobaze.mealsearch.presentation.meal_search.MealSearchViewModel", ((Provider) mealSearchViewModelProvider), "com.zobaze.mealsearch.presentation.quotes.QuoteViewModel", ((Provider) quoteViewModelProvider), "com.zobaze.mealsearch.presentation.firebase_users.UserViewModel", ((Provider) userViewModelProvider));
+      return ImmutableMap.<String, Provider<ViewModel>>of("com.zobaze.mealsearch.presentation.meal_details.MealDetailsViewModel", ((Provider) mealDetailsViewModelProvider), "com.zobaze.mealsearch.presentation.meal_search.MealSearchViewModel", ((Provider) mealSearchViewModelProvider), "com.zobaze.mealsearch.presentation.products.ProductViewModel", ((Provider) productViewModelProvider), "com.zobaze.mealsearch.presentation.firebase_users.UserViewModel", ((Provider) userViewModelProvider));
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -520,8 +520,8 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
           case 1: // com.zobaze.mealsearch.presentation.meal_search.MealSearchViewModel 
           return (T) new MealSearchViewModel(viewModelCImpl.searchMealsUseCase());
 
-          case 2: // com.zobaze.mealsearch.presentation.quotes.QuoteViewModel 
-          return (T) new QuoteViewModel(viewModelCImpl.quotesDisplayUseCase());
+          case 2: // com.zobaze.mealsearch.presentation.products.ProductViewModel 
+          return (T) new ProductViewModel(viewModelCImpl.productsDisplayUseCase());
 
           case 3: // com.zobaze.mealsearch.presentation.firebase_users.UserViewModel 
           return (T) new UserViewModel(viewModelCImpl.firebaseUserUserCase());
@@ -605,7 +605,7 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
 
     private Provider<MealSearchAPI> provideMealSearchAPIProvider;
 
-    private Provider<QuoteDisplayAPI> provideQuoteDisplayAPIProvider;
+    private Provider<ProductDisplayAPI> provideProductsDisplayAPIProvider;
 
     private SingletonCImpl() {
 
@@ -621,8 +621,8 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
       return HIltModules_ProvideMealSearchRepositoryFactory.provideMealSearchRepository(provideMealSearchAPIProvider.get());
     }
 
-    private QuoteDisplayRepository quoteDisplayRepository() {
-      return HIltModules_ProvideQuotesListFactory.provideQuotesList(provideQuoteDisplayAPIProvider.get());
+    private ProductDisplayRepository productDisplayRepository() {
+      return HIltModules_ProvideProductsListFactory.provideProductsList(provideProductsDisplayAPIProvider.get());
     }
 
     private FirebaseDataSourceRepository firebaseDataSourceRepository() {
@@ -632,7 +632,7 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
     @SuppressWarnings("unchecked")
     private void initialize() {
       this.provideMealSearchAPIProvider = DoubleCheck.provider(new SwitchingProvider<MealSearchAPI>(singletonCImpl, 0));
-      this.provideQuoteDisplayAPIProvider = DoubleCheck.provider(new SwitchingProvider<QuoteDisplayAPI>(singletonCImpl, 1));
+      this.provideProductsDisplayAPIProvider = DoubleCheck.provider(new SwitchingProvider<ProductDisplayAPI>(singletonCImpl, 1));
     }
 
     @Override
@@ -671,8 +671,8 @@ public final class DaggerBaseApplication_HiltComponents_SingletonC {
           case 0: // com.zobaze.mealsearch.data.remote.MealSearchAPI 
           return (T) HIltModules_ProvideMealSearchAPIFactory.provideMealSearchAPI();
 
-          case 1: // com.zobaze.mealsearch.data.remote.QuoteDisplayAPI 
-          return (T) HIltModules_ProvideQuoteDisplayAPIFactory.provideQuoteDisplayAPI();
+          case 1: // com.zobaze.mealsearch.data.remote.ProductDisplayAPI 
+          return (T) HIltModules_ProvideProductsDisplayAPIFactory.provideProductsDisplayAPI();
 
           default: throw new AssertionError(id);
         }

@@ -10,7 +10,7 @@ import com.zobaze.mealsearch.domain.model.User
 
 class FirebaseUsersAdapter : RecyclerView.Adapter<FirebaseUsersAdapter.FirebaseUserViewHolder>() {
 
-    var quotes: List<User>? = null
+    var users: List<User>? = null
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -25,10 +25,10 @@ class FirebaseUsersAdapter : RecyclerView.Adapter<FirebaseUsersAdapter.FirebaseU
         )
     )
 
-    override fun getItemCount() = quotes?.size ?: 0
+    override fun getItemCount() = users?.size ?: 0
 
     override fun onBindViewHolder(holder: FirebaseUserViewHolder, position: Int) {
-        holder.binding.quote = quotes!![position]
+        holder.binding.quote = users!![position]
     }
 
     inner class FirebaseUserViewHolder(val binding: ItemUserBinding) :

@@ -30,15 +30,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <SearchView
-                    android:layout_toStartOf="@+id/tv_display_quotes"
+                    android:layout_toStartOf="@+id/tv_display_products"
                     android:id="@+id/meal_search_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:iconifiedByDefault="false"
                     android:queryHint="Search Meal here..." />
                 <TextView
-                    android:id="@+id/tv_display_quotes"
-                    android:text="Display Quotes"
+                    android:id="@+id/tv_display_products"
+                    android:text="Display Products"
                     android:padding="10sp"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"

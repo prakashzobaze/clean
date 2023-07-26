@@ -1,12 +1,9 @@
 package com.zobaze.mealsearch.domain.use_case
 
 import com.zobaze.mealsearch.common.Resource
-import com.zobaze.mealsearch.data.model.toDomainQuote
 import com.zobaze.mealsearch.data.model.toUserData
-import com.zobaze.mealsearch.domain.model.Quote
 import com.zobaze.mealsearch.domain.model.User
 import com.zobaze.mealsearch.domain.repository.FirebaseDataSourceRepository
-import com.zobaze.mealsearch.domain.repository.QuoteDisplayRepository
 import java.io.IOException
 import javax.inject.Inject
 

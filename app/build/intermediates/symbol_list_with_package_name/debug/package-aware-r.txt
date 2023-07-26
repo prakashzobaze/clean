@@ -2963,7 +2963,7 @@ id quotesFragment
 id radio
 id ratio
 id rectangles
-id recyclerview_quotes
+id recyclerview
 id report_drawn
 id reverseSawtooth
 id right
@@ -3079,7 +3079,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tv_display_quotes
+id tv_display_products
 id tv_users
 id unchecked
 id uniform
@@ -3247,7 +3247,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_meal_details
 layout fragment_meal_search
-layout item_quote
+layout item_product
 layout item_user
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

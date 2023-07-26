@@ -28,14 +28,14 @@ public final class CommonListBinding implements ViewBinding {
   public final ProgressBar progressMealSearch;
 
   @NonNull
-  public final RecyclerView recyclerviewQuotes;
+  public final RecyclerView recyclerview;
 
   private CommonListBinding(@NonNull RelativeLayout rootView, @NonNull TextView nothingFound,
-      @NonNull ProgressBar progressMealSearch, @NonNull RecyclerView recyclerviewQuotes) {
+      @NonNull ProgressBar progressMealSearch, @NonNull RecyclerView recyclerview) {
     this.rootView = rootView;
     this.nothingFound = nothingFound;
     this.progressMealSearch = progressMealSearch;
-    this.recyclerviewQuotes = recyclerviewQuotes;
+    this.recyclerview = recyclerview;
   }
 
   @Override
@@ -77,14 +77,14 @@ public final class CommonListBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recyclerview_quotes;
-      RecyclerView recyclerviewQuotes = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerviewQuotes == null) {
+      id = R.id.recyclerview;
+      RecyclerView recyclerview = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerview == null) {
         break missingId;
       }
 
       return new CommonListBinding((RelativeLayout) rootView, nothingFound, progressMealSearch,
-          recyclerviewQuotes);
+          recyclerview);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

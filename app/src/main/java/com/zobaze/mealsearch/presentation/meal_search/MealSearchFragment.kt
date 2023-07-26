@@ -89,7 +89,7 @@ class MealSearchFragment : Fragment() {
             )
         }
 
-        binding.tvDisplayQuotes.setOnClickListener {
+        binding.tvDisplayProducts.setOnClickListener {
             findNavController().navigate(MealSearchFragmentDirections.actionMealSearchFragmentToQuotesFragment())
         }
 

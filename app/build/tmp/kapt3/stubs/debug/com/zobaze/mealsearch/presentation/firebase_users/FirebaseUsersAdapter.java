@@ -1,20 +1,20 @@
 package com.zobaze.mealsearch.presentation.firebase_users;
 
-@kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\f\u0012\b\u0012\u00060\u0002R\u00020\u00000\u0001:\u0001\u0016B\u0005\u00a2\u0006\u0002\u0010\u0003J\b\u0010\f\u001a\u00020\rH\u0016J\u001c\u0010\u000e\u001a\u00020\u000f2\n\u0010\u0010\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u0011\u001a\u00020\rH\u0016J\u001c\u0010\u0012\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\rH\u0016R4\u0010\u0007\u001a\n\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u00052\u000e\u0010\u0004\u001a\n\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u0005@FX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000b\u00a8\u0006\u0017"}, d2 = {"Lcom/zobaze/mealsearch/presentation/firebase_users/FirebaseUsersAdapter;", "Landroidx/recyclerview/widget/RecyclerView$Adapter;", "Lcom/zobaze/mealsearch/presentation/firebase_users/FirebaseUsersAdapter$FirebaseUserViewHolder;", "()V", "value", "", "Lcom/zobaze/mealsearch/domain/model/User;", "quotes", "getQuotes", "()Ljava/util/List;", "setQuotes", "(Ljava/util/List;)V", "getItemCount", "", "onBindViewHolder", "", "holder", "position", "onCreateViewHolder", "parent", "Landroid/view/ViewGroup;", "viewType", "FirebaseUserViewHolder", "app_debug"})
+@kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\f\u0012\b\u0012\u00060\u0002R\u00020\u00000\u0001:\u0001\u0016B\u0005\u00a2\u0006\u0002\u0010\u0003J\b\u0010\f\u001a\u00020\rH\u0016J\u001c\u0010\u000e\u001a\u00020\u000f2\n\u0010\u0010\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u0011\u001a\u00020\rH\u0016J\u001c\u0010\u0012\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\rH\u0016R4\u0010\u0007\u001a\n\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u00052\u000e\u0010\u0004\u001a\n\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u0005@FX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000b\u00a8\u0006\u0017"}, d2 = {"Lcom/zobaze/mealsearch/presentation/firebase_users/FirebaseUsersAdapter;", "Landroidx/recyclerview/widget/RecyclerView$Adapter;", "Lcom/zobaze/mealsearch/presentation/firebase_users/FirebaseUsersAdapter$FirebaseUserViewHolder;", "()V", "value", "", "Lcom/zobaze/mealsearch/domain/model/User;", "users", "getUsers", "()Ljava/util/List;", "setUsers", "(Ljava/util/List;)V", "getItemCount", "", "onBindViewHolder", "", "holder", "position", "onCreateViewHolder", "parent", "Landroid/view/ViewGroup;", "viewType", "FirebaseUserViewHolder", "app_debug"})
 public final class FirebaseUsersAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<com.zobaze.mealsearch.presentation.firebase_users.FirebaseUsersAdapter.FirebaseUserViewHolder> {
     @org.jetbrains.annotations.Nullable
-    private java.util.List<com.zobaze.mealsearch.domain.model.User> quotes;
+    private java.util.List<com.zobaze.mealsearch.domain.model.User> users;
     
     public FirebaseUsersAdapter() {
         super();
     }
     
     @org.jetbrains.annotations.Nullable
-    public final java.util.List<com.zobaze.mealsearch.domain.model.User> getQuotes() {
+    public final java.util.List<com.zobaze.mealsearch.domain.model.User> getUsers() {
         return null;
     }
     
-    public final void setQuotes(@org.jetbrains.annotations.Nullable
+    public final void setUsers(@org.jetbrains.annotations.Nullable
     java.util.List<com.zobaze.mealsearch.domain.model.User> value) {
     }
     

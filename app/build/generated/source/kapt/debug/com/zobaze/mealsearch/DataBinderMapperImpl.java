@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.zobaze.mealsearch.databinding.FragmentMealDetailsBindingImpl;
 import com.zobaze.mealsearch.databinding.FragmentMealSearchBindingImpl;
-import com.zobaze.mealsearch.databinding.ItemQuoteBindingImpl;
+import com.zobaze.mealsearch.databinding.ItemProductBindingImpl;
 import com.zobaze.mealsearch.databinding.ItemUserBindingImpl;
 import com.zobaze.mealsearch.databinding.ViewHolderSearchListBindingImpl;
 import java.lang.IllegalArgumentException;
@@ -26,7 +26,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTMEALSEARCH = 2;
 
-  private static final int LAYOUT_ITEMQUOTE = 3;
+  private static final int LAYOUT_ITEMPRODUCT = 3;
 
   private static final int LAYOUT_ITEMUSER = 4;
 
@@ -37,7 +37,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.zobaze.mealsearch.R.layout.fragment_meal_details, LAYOUT_FRAGMENTMEALDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.zobaze.mealsearch.R.layout.fragment_meal_search, LAYOUT_FRAGMENTMEALSEARCH);
-    INTERNAL_LAYOUT_ID_LOOKUP.put(com.zobaze.mealsearch.R.layout.item_quote, LAYOUT_ITEMQUOTE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.zobaze.mealsearch.R.layout.item_product, LAYOUT_ITEMPRODUCT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.zobaze.mealsearch.R.layout.item_user, LAYOUT_ITEMUSER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.zobaze.mealsearch.R.layout.view_holder_search_list, LAYOUT_VIEWHOLDERSEARCHLIST);
   }
@@ -63,11 +63,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_meal_search is invalid. Received: " + tag);
         }
-        case  LAYOUT_ITEMQUOTE: {
-          if ("layout/item_quote_0".equals(tag)) {
-            return new ItemQuoteBindingImpl(component, view);
+        case  LAYOUT_ITEMPRODUCT: {
+          if ("layout/item_product_0".equals(tag)) {
+            return new ItemProductBindingImpl(component, view);
           }
-          throw new IllegalArgumentException("The tag for item_quote is invalid. Received: " + tag);
+          throw new IllegalArgumentException("The tag for item_product is invalid. Received: " + tag);
         }
         case  LAYOUT_ITEMUSER: {
           if ("layout/item_user_0".equals(tag)) {
@@ -142,7 +142,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     static {
       sKeys.put("layout/fragment_meal_details_0", com.zobaze.mealsearch.R.layout.fragment_meal_details);
       sKeys.put("layout/fragment_meal_search_0", com.zobaze.mealsearch.R.layout.fragment_meal_search);
-      sKeys.put("layout/item_quote_0", com.zobaze.mealsearch.R.layout.item_quote);
+      sKeys.put("layout/item_product_0", com.zobaze.mealsearch.R.layout.item_product);
       sKeys.put("layout/item_user_0", com.zobaze.mealsearch.R.layout.item_user);
       sKeys.put("layout/view_holder_search_list_0", com.zobaze.mealsearch.R.layout.view_holder_search_list);
     }

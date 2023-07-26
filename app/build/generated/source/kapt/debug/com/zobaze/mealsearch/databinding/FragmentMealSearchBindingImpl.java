@@ -16,7 +16,7 @@ public class FragmentMealSearchBindingImpl extends FragmentMealSearchBinding  {
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.tv_users, 1);
         sViewsWithIds.put(R.id.meal_search_view, 2);
-        sViewsWithIds.put(R.id.tv_display_quotes, 3);
+        sViewsWithIds.put(R.id.tv_display_products, 3);
         sViewsWithIds.put(R.id.meal_search_recycler, 4);
         sViewsWithIds.put(R.id.progress_meal_search, 5);
         sViewsWithIds.put(R.id.nothing_found, 6);

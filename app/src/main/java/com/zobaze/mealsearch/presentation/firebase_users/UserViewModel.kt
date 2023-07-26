@@ -22,11 +22,11 @@ class UserViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            getQuotesList()
+            getUsersList()
         }
     }
 
-    private fun getQuotesList() {
+    private fun getUsersList() {
         viewModelScope.launch {
             try {
                 _usersList.value = UserDetailState(isLoading = true)

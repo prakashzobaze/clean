@@ -1,8 +1,8 @@
 package com.zobaze.mealsearch.data.repository
 
-import com.zobaze.mealsearch.data.remote.QuoteDisplayAPI
-import com.zobaze.mealsearch.domain.repository.QuoteDisplayRepository
+import com.zobaze.mealsearch.data.remote.ProductDisplayAPI
+import com.zobaze.mealsearch.domain.repository.ProductDisplayRepository
 
-class QuoteDisplayRepositoryImpl(private val quoteDisplayAPI: QuoteDisplayAPI) : QuoteDisplayRepository {
-    override suspend fun getQuotes() = quoteDisplayAPI.getDisplayQuotes()
+class QuoteDisplayRepositoryImpl(private val quoteDisplayAPI: ProductDisplayAPI) : ProductDisplayRepository {
+    override suspend fun getProducts() = quoteDisplayAPI.getProducts()
 }

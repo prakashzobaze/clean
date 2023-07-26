@@ -7,8 +7,8 @@ import com.zobaze.mealsearch.presentation.meal_details.MealDetailsFragment_Gener
 import com.zobaze.mealsearch.presentation.meal_details.MealDetailsViewModel_HiltModules;
 import com.zobaze.mealsearch.presentation.meal_search.MealSearchFragment_GeneratedInjector;
 import com.zobaze.mealsearch.presentation.meal_search.MealSearchViewModel_HiltModules;
-import com.zobaze.mealsearch.presentation.quotes.QuoteViewModel_HiltModules;
-import com.zobaze.mealsearch.presentation.quotes.QuotesFragment_GeneratedInjector;
+import com.zobaze.mealsearch.presentation.products.ProductViewModel_HiltModules;
+import com.zobaze.mealsearch.presentation.products.ProductsFragment_GeneratedInjector;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -164,7 +164,7 @@ public final class BaseApplication_HiltComponents {
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           MealDetailsViewModel_HiltModules.KeyModule.class,
           MealSearchViewModel_HiltModules.KeyModule.class,
-          QuoteViewModel_HiltModules.KeyModule.class,
+          ProductViewModel_HiltModules.KeyModule.class,
           UserViewModel_HiltModules.KeyModule.class
       }
   )
@@ -204,7 +204,7 @@ public final class BaseApplication_HiltComponents {
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           MealDetailsViewModel_HiltModules.BindsModule.class,
           MealSearchViewModel_HiltModules.BindsModule.class,
-          QuoteViewModel_HiltModules.BindsModule.class,
+          ProductViewModel_HiltModules.BindsModule.class,
           UserViewModel_HiltModules.BindsModule.class
       }
   )
@@ -233,7 +233,7 @@ public final class BaseApplication_HiltComponents {
   public abstract static class FragmentC implements UsersFragment_GeneratedInjector,
       MealDetailsFragment_GeneratedInjector,
       MealSearchFragment_GeneratedInjector,
-      QuotesFragment_GeneratedInjector,
+      ProductsFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,
       ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,

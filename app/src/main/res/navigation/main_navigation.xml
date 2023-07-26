@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/quotesFragment"
-        android:name="com.zobaze.mealsearch.presentation.quotes.QuotesFragment"
+        android:name="com.zobaze.mealsearch.presentation.products.ProductsFragment"
         android:label="QuotesFragment"/>
 
     <fragment

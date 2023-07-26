@@ -19,10 +19,10 @@ id meal_search_view
 id nothing_found
 id progress_meal_search
 id quotesFragment
-id recyclerview_quotes
+id recyclerview
 id text_view_author
 id text_view_quote
-id tv_display_quotes
+id tv_display_products
 id tv_users
 id usersFragment
 id view
@@ -32,7 +32,7 @@ layout activity_main
 layout common_list
 layout fragment_meal_details
 layout fragment_meal_search
-layout item_quote
+layout item_product
 layout item_user
 layout view_holder_search_list
 mipmap ic_launcher

@@ -1,6 +1,5 @@
 package com.zobaze.mealsearch.data.model
 
-import com.zobaze.mealsearch.domain.model.Meal
 import com.zobaze.mealsearch.domain.model.User
 
 data class FirebaseUserInfo(

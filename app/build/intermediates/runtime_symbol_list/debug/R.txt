@@ -2962,7 +2962,7 @@ int id quotesFragment 0x7f08014c
 int id radio 0x7f08014d
 int id ratio 0x7f08014e
 int id rectangles 0x7f08014f
-int id recyclerview_quotes 0x7f080150
+int id recyclerview 0x7f080150
 int id report_drawn 0x7f080151
 int id reverseSawtooth 0x7f080152
 int id right 0x7f080153
@@ -3078,7 +3078,7 @@ int id transition_position 0x7f0801c0
 int id transition_scene_layoutid_cache 0x7f0801c1
 int id transition_transform 0x7f0801c2
 int id triangle 0x7f0801c3
-int id tv_display_quotes 0x7f0801c4
+int id tv_display_products 0x7f0801c4
 int id tv_users 0x7f0801c5
 int id unchecked 0x7f0801c6
 int id uniform 0x7f0801c7
@@ -3246,7 +3246,7 @@ int layout design_text_input_end_icon 0x7f0b002c
 int layout design_text_input_start_icon 0x7f0b002d
 int layout fragment_meal_details 0x7f0b002e
 int layout fragment_meal_search 0x7f0b002f
-int layout item_quote 0x7f0b0030
+int layout item_product 0x7f0b0030
 int layout item_user 0x7f0b0031
 int layout m3_alert_dialog 0x7f0b0032
 int layout m3_alert_dialog_actions 0x7f0b0033

@@ -29,7 +29,7 @@ class UsersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.recyclerviewQuotes.adapter = userAdapter
+        binding.recyclerview.adapter = userAdapter
 
         viewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
@@ -51,7 +51,7 @@ class UsersFragment : Fragment() {
                     }
                     binding.progressMealSearch.visibility = View.GONE
 
-                    userAdapter.quotes = it
+                    userAdapter.users = it
                 }
 
 
