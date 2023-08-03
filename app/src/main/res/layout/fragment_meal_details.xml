@@ -9,7 +9,7 @@
 
         <variable
             name="mealDetails"
-            type="com.zobaze.mealsearch.domain.model.MealDetails" />
+            type="com.zobaze.mealsearch.shared.domain.model.MealDetails" />
 
     </data>
 

@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.zobaze.mealsearch.R
 import com.zobaze.mealsearch.databinding.ItemUserBinding
-import com.zobaze.mealsearch.domain.model.User
+import com.zobaze.mealsearch.shared.domain.model.User
 
 class FirebaseUsersAdapter : RecyclerView.Adapter<FirebaseUsersAdapter.FirebaseUserViewHolder>() {
 

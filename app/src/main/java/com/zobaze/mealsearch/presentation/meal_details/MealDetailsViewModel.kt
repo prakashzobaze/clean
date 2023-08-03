@@ -2,17 +2,14 @@ package com.zobaze.mealsearch.presentation.meal_details
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.zobaze.mealsearch.common.Resource
-import com.zobaze.mealsearch.domain.use_case.GetMealDetailsUseCase
-import dagger.hilt.android.lifecycle.HiltViewModel
+import com.zobaze.mealsearch.shared.core.Resource
+import com.zobaze.mealsearch.shared.domain.usecase.GetMealDetailsUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import java.io.IOException
-import javax.inject.Inject
 
-@HiltViewModel
-class MealDetailsViewModel @Inject constructor(private val mealDetailsUseCase: GetMealDetailsUseCase) :
+class MealDetailsViewModel constructor(private val mealDetailsUseCase: GetMealDetailsUseCase) :
     ViewModel() {
 
     private val _mealDetails = MutableStateFlow(MealDetailsState())

@@ -9,15 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.coroutineScope
 import com.zobaze.mealsearch.databinding.CommonListBinding
-import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-@AndroidEntryPoint
 class UsersFragment : Fragment() {
 
     private val userAdapter by lazy { FirebaseUsersAdapter() }
     private lateinit var binding: CommonListBinding
-    private lateinit var viewModel: UserViewModel
+    private val userViewModel: UserViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,10 +30,8 @@ class UsersFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerview.adapter = userAdapter
 
-        viewModel = ViewModelProvider(this)[UserViewModel::class.java]
-
         lifecycle.coroutineScope.launchWhenCreated {
-            viewModel.usersList.collect {
+            userViewModel.usersList.collect {
                 if (it.isLoading) {
                     binding.nothingFound.visibility = View.GONE
                     binding.progressMealSearch.visibility = View.VISIBLE

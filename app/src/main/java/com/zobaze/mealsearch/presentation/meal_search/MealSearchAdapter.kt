@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.zobaze.mealsearch.databinding.ViewHolderSearchListBinding
-import com.zobaze.mealsearch.domain.model.Meal
+import com.zobaze.mealsearch.shared.domain.model.Meal
 
 class MealSearchAdapter : RecyclerView.Adapter<MealSearchAdapter.MyViewHolder>() {
 

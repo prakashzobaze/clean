@@ -7,19 +7,17 @@ import android.view.ViewGroup
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.coroutineScope
 import androidx.navigation.fragment.findNavController
 import com.zobaze.mealsearch.databinding.FragmentMealSearchBinding
-import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
 class MealSearchFragment : Fragment() {
 
     private val searchAdapter = MealSearchAdapter()
 
 
-    private val viewModel: MealSearchViewModel by viewModels()
+    private val mealSearchViewModel: MealSearchViewModel by viewModel()
 
 
     private var _binding: FragmentMealSearchBinding? = null
@@ -45,7 +43,7 @@ class MealSearchFragment : Fragment() {
         binding.mealSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(s: String?): Boolean {
                 s?.let {
-                    viewModel.getSearchMeals(it)
+                    mealSearchViewModel.getSearchMeals(it)
                 }
                 return false
             }
@@ -56,7 +54,7 @@ class MealSearchFragment : Fragment() {
         })
 
         lifecycle.coroutineScope.launchWhenCreated {
-            viewModel.mealSearchList.collect {
+            mealSearchViewModel.mealSearchList.collect {
                 if (it.isLoading) {
                     binding.nothingFound.visibility = View.GONE
                     binding.progressMealSearch.visibility = View.VISIBLE

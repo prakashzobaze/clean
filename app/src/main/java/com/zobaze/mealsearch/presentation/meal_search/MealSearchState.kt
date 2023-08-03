@@ -1,6 +1,7 @@
 package com.zobaze.mealsearch.presentation.meal_search
 
-import com.zobaze.mealsearch.domain.model.Meal
+import com.zobaze.mealsearch.shared.domain.model.Meal
+
 
 data class MealSearchState(
     val isLoading: Boolean = false,

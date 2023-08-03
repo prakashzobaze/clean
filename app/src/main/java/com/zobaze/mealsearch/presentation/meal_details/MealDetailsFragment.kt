@@ -11,17 +11,16 @@ import androidx.lifecycle.coroutineScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.zobaze.mealsearch.databinding.FragmentMealDetailsBinding
-import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-@AndroidEntryPoint
 class MealDetailsFragment : Fragment() {
 
     private var _binding: FragmentMealDetailsBinding? = null
     private val binding: FragmentMealDetailsBinding
         get() = _binding!!
 
-    private val viewModel: MealDetailsViewModel by viewModels()
+    private val mealDetailsViewModel: MealDetailsViewModel by viewModel()
 
     private val args: MealDetailsFragmentArgs by navArgs()
 
@@ -35,12 +34,12 @@ class MealDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         args.mealId?.let {
-            viewModel.getMealDetails(it)
+            mealDetailsViewModel.getMealDetails(it)
         }
 
 
         lifecycle.coroutineScope.launchWhenCreated {
-            viewModel.mealDetails.collect {
+            mealDetailsViewModel.mealDetails.collect {
                 if (it.isLoading) {
                 }
                 if (it.error.isNotBlank()) {
