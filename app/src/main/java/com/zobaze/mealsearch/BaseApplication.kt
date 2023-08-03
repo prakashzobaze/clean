@@ -1,7 +1,11 @@
 package com.zobaze.mealsearch
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+import com.zobaze.mealsearch.di.setupKoin
 
-@HiltAndroidApp
-class BaseApplication : Application()
+class BaseApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        setupKoin(this)
+    }
+}

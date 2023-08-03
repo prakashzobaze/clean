@@ -7,7 +7,7 @@
 
         <variable
             name="meal"
-            type="com.zobaze.mealsearch.domain.model.Meal" />
+            type="com.zobaze.mealsearch.shared.domain.model.Meal" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

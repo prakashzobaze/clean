@@ -2,17 +2,14 @@ package com.zobaze.mealsearch.presentation.firebase_users
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.zobaze.mealsearch.common.Resource
-import com.zobaze.mealsearch.domain.use_case.FirebaseUserUserCase
-import dagger.hilt.android.lifecycle.HiltViewModel
+import com.zobaze.mealsearch.shared.core.Resource
+import com.zobaze.mealsearch.shared.domain.usecase.FirebaseUserUserCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import java.io.IOException
-import javax.inject.Inject
 
-@HiltViewModel
-class UserViewModel @Inject constructor(
+class UserViewModel constructor(
     private val firebaseUserUserCase: FirebaseUserUserCase
 ) : ViewModel() {
 

@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.zobaze.mealsearch.R
 import com.zobaze.mealsearch.databinding.ItemProductBinding
-import com.zobaze.mealsearch.domain.model.Product
+import com.zobaze.mealsearch.shared.domain.model.Product
 
 class ProductsAdapter : RecyclerView.Adapter<ProductsAdapter.QuoteViewHolder>() {
 

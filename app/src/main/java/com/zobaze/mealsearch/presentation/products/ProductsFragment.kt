@@ -9,14 +9,13 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.coroutineScope
 import com.zobaze.mealsearch.databinding.CommonListBinding
-import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
 class ProductsFragment : Fragment() {
 
     private val productsAdapter by lazy { ProductsAdapter() }
     private lateinit var binding: CommonListBinding
-    private lateinit var viewModel: ProductViewModel
+    private val productViewModel: ProductViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,10 +29,8 @@ class ProductsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerview.adapter = productsAdapter
 
-        viewModel = ViewModelProvider(this)[ProductViewModel::class.java]
-
         lifecycle.coroutineScope.launchWhenCreated {
-            viewModel.productsDisplay.collect {
+            productViewModel.productsDisplay.collect {
                 if (it.isLoading) {
                     binding.nothingFound.visibility = View.GONE
                     binding.progressMealSearch.visibility = View.VISIBLE
