@@ -21,6 +21,8 @@ preferences = "1.2.0"
 exoplayer = "2.18.7"
 accompanistPager = "0.25.1"
 tvCompose = "1.0.0-alpha07"
+firebase = "31.0.3"
+okHttpLoggingInterceptor = "4.11.0"
 
 [libraries]
 # Plugins
@@ -38,13 +40,22 @@ kotlinx-serializationJson = { module = "org.jetbrains.kotlinx:kotlinx-serializat
 # Ktor
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorVer"}
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorVer"}
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktorVer"}
+ktor-client-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorVer"}
+ktor-client-serialization-gson = { module = "io.ktor:ktor-serialization-gson", version.ref = "ktorVer"}
 ktor-client-ios = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorVer"}
+okhttp-loggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okHttpLoggingInterceptor"}
 
 # SQL Delight
 sqldelight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqlDelight" }
 sqldelight-ext = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
 sqldelight-android = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqldelight-ios = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
+
+#Firebase
+firebase-firestore = {module = "com.google.firebase:firebase-firestore"}
+firebase-analyticsKtx = {module = "com.google.firebase:firebase-analytics-ktx"}
+firebase-databaseKtx = {module = "com.google.firebase:firebase-database-ktx"}
 
 # AndroidX
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -75,13 +86,6 @@ koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin"}
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin"}
 
 testing-junit = { module = "junit:junit", version.ref = "testing-junit"}
-
-# Exoplayer
-exoplayer-core = { module = "com.google.android.exoplayer:exoplayer-core", version.ref = "exoplayer"}
-exoplayer-dash = { module = "com.google.android.exoplayer:exoplayer-dash", version.ref = "exoplayer"}
-exoplayer-hls = { module = "com.google.android.exoplayer:exoplayer-hls", version.ref = "exoplayer"}
-exoplayer-ui = { module = "com.google.android.exoplayer:exoplayer-ui", version.ref = "exoplayer"}
-exoplayer-ima = { module = "com.google.android.exoplayer:extension-ima", version.ref = "exoplayer"}
 
 # Accompanist
 accompanist-pager-core = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanistPager"}

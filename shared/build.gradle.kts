@@ -45,11 +45,11 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-okhttp:2.0.1")
+                implementation(libs.ktor.client.okhttp)
 
-                implementation("io.ktor:ktor-client-content-negotiation:2.0.1")
-                implementation("io.ktor:ktor-serialization-gson:2.0.1")
-                implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+                implementation(libs.ktor.client.contentNegotiation)
+                implementation(libs.ktor.client.serialization.gson)
+                implementation(libs.okhttp.loggingInterceptor)
                 // Ktor android engine
                 implementation(libs.ktor.client.android)
 //                // SqlDelight android driver
@@ -57,9 +57,9 @@ kotlin {
                 implementation(libs.androidx.preferences)
 
                 implementation(platform("com.google.firebase:firebase-bom:31.0.3"))
-                implementation("com.google.firebase:firebase-firestore")
-                implementation("com.google.firebase:firebase-analytics-ktx")
-                implementation("com.google.firebase:firebase-database-ktx")
+                implementation(libs.firebase.firestore)
+                implementation(libs.firebase.analyticsKtx)
+                implementation(libs.firebase.databaseKtx)
             }
         }
     }
